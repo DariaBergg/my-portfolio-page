@@ -1,0 +1,655 @@
+$primary-color: #d8ae7e;
+$secondary-color: white;
+$accent-color: #d96c47;
+$light-bg-color: #ffe0b5;
+$font-color: black;
+$font-family: 'Montserrat', sans-serif;
+$font-size-base: 16px;
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: $font-family;
+  color: $font-color;
+  background: linear-gradient(
+    to right,
+    $primary-color 35%,
+    $secondary-color 0%
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: $accent-color !important;
+  font-weight: bold;
+}
+
+// /**********************************************************
+//  *               styles for header
+// **********************************************************/
+
+// .layout {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+//   width: 100%;
+// }
+
+/* whole header div*/
+.header {
+  width: 100%;
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 999;
+
+  /* left div with name and profession */
+  .left-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    width: 400px;
+
+    h2 {
+      margin: 0 30px 0 0px;
+    }
+    p {
+      margin-top: 30px;
+    }
+  }
+
+  @media (min-width: 768px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: end;
+  }
+  .nav-bar ul {
+    display: flex;
+    list-style: none;
+    padding: 30px 10px;
+    margin: 0;
+  }
+  .nav-bar li {
+    margin-right: 20px;
+    font-family: $font-family;
+  }
+  .nav-bar li a {
+    color: black !important;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .nav-bar li a.active {
+    color: $accent-color !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+}
+}
+
+// /**********************************************************
+//  *               styles for footer
+// **********************************************************/
+/*footer whole div*/
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  background-color: $secondary-color;
+  width: 100%;
+
+  /*div with name and year*/
+  .by {
+    margin-left: 50px;
+  }
+
+  /*div with email address*/
+  .write-me {
+    margin-right: 50px;
+  }
+}
+
+// /**********************************************************
+//  *               styles for main page
+// **********************************************************/
+
+/*whole main page div*/
+.Main-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 0;
+
+  /* styles for main page boxes*/
+  .photo-and-name,
+  .info {
+    background-color: $secondary-color;
+    flex: 1;
+    height: 85%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px black;
+  }
+
+  /*style for left box on main page*/
+  .photo-and-name {
+    margin-left: 200px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: $light-bg-color;
+
+    /* styles for main page left box*/
+    img {
+      width: 60%;
+      height: auto;
+      object-fit: cover;
+      margin: 20px auto;
+      border-radius: 50%;
+    }
+
+    .horizontal-line {
+      width: 70px;
+      height: 2px;
+      background-color: black;
+      margin: 10px auto;
+    }
+  }
+
+  /*style for right box on main page*/
+  .info {
+    margin-right: 200px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+
+  /*style inside right box on main page*/
+  .greet {
+    h1 {
+      font-size: 6.25rem;
+      margin-top: 20px;
+      text-align: center;
+    }
+    h3 {
+      margin-top: -50px;
+      font-size: 1.5625rem;
+    }
+  }
+  /* styles for main page buttons*/
+  .buttons {
+    button {
+      border: 1px solid black;
+      background-color: $secondary-color;
+      padding: 5px 15px;
+      margin-right: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: black;
+      color: $secondary-color;
+    }
+  }
+  /*style for right box information on main page*/
+  .about-me {
+    font-size: 1.06rem;
+    text-align: left;
+  }
+
+  /*style for  list of skills on main page*/
+  .my-skills {
+    p {
+      text-align: left;
+    }
+    li {
+      text-align: left;
+    }
+  }
+}
+
+/**********************************************************
+*                  styles for contact page
+**********************************************************/
+
+/*contact page whole div*/
+.contact-page {
+  background-color: $primary-color;
+  padding-top: 20px;
+  width: 100vw;
+  height: 100vh;
+
+  /*form to contact*/
+  .form {
+    background-color: $secondary-color;
+    box-shadow: 2px 2px 2px black;
+    text-align: center;
+    max-width: 450px;
+    min-height: 350px;
+    margin: 100px auto;
+    flex-shrink: 2;
+    text-align: start;
+    padding-left: 55px;
+    font-weight: bold;
+    padding-top: 30px;
+    flex-shrink: 1;
+
+    input {
+      margin-top: 5px;
+      margin-bottom: 25px;
+      border: none;
+      border-bottom: 1px solid black;
+    }
+    label {
+      margin-bottom: 20px;
+    }
+
+    .message-style {
+      margin-top: 10px;
+      resize: none;
+      min-height: 70px;
+    }
+    .submit-button {
+      border: 1px solid black;
+      background-color: $secondary-color;
+      padding: 5px 35px;
+      margin-top: 15px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .submit-button:hover {
+      background-color: black;
+      color: $secondary-color;
+    }
+  }
+
+  /*text style of main text */
+  .contact-me {
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: -50px;
+    }
+  }
+}
+
+/**********************************************************
+*                  styles for resume and projects page
+**********************************************************/
+/*projects page and resume page whole divs*/
+.projects-page,
+.resume-page {
+  background-color: $primary-color;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 100vw;
+}
+
+/*style of boxes for both pages*/
+.education-box,
+.projects-box {
+  background-color: $secondary-color;
+  box-shadow: 2px 2px 2px black;
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 20px;
+  text-align: left;
+  justify-content: space-around;
+  align-items: center;
+}
+/*resume page boxes name text style*/
+.resume-page h2 {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/*box2 is a box in resume page about school education*/
+.box2 {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin-top: 50px;
+  width: 70%;
+}
+/*additional styles for box2*/
+.location {
+  font-size: 0.85rem;
+}
+/*styles fro images in prjects boxes on project page*/
+.left img {
+  width: 200px;
+  margin-right: 50px;
+}
+
+/**********************************************************
+*                  responsive styles
+**********************************************************/
+@media only screen and (max-width: 500px) {
+  
+  body, html {
+    background: $primary-color !important;
+  }
+ 
+  .Main-page {
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+
+      .photo-and-name {
+        margin-top: 400px !important;
+      }
+    .photo-and-name, .info {
+        padding: 20px;
+        max-width: 80%;
+        margin: 0;
+        margin-left: 50px !important;
+      }
+      .greet h1 {
+          margin-top: -50px;  
+          font-size: 3.125rem !important;
+          padding-bottom: 15px;
+      }
+      .greet h3 {
+          font-size: 0.7rem;
+      }
+      .info {
+          padding-top: 70px !important;
+      }
+      .about-me {
+          font-size: 0.75rem;
+        }
+    }
+    
+  .resume-page {
+  h1, h2 {
+      margin-left: 70px !important;
+      width: 100%;
+    }
+    .education-box {
+      min-width: 85% !important;
+      display: flex;
+      flex-direction: column;
+      margin-left: 70px;
+    }
+  .education-box p {
+      font-size: 0.9rem;
+    } 
+
+  .right {
+    ul {
+    font-size: 0.9rem;
+  }
+  }
+  .left {
+    h3, p {
+      text-align: center;
+  }
+}
+}
+.projects-page {
+  .projects-box {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+  }
+
+  h1, h2, h3 {
+    margin-left: 70px !important;
+    width: 100%;
+  }
+  .projects-box p {
+    font-size: 0.9rem;
+  } 
+  right {
+    ul {
+    font-size: 0.9rem;
+  }
+  }
+  .left {
+    h3, p {
+      text-align: center;
+}
+}
+}
+.header {
+    .left-header {
+      h2 {
+          font-size: 1.125rem;
+          margin-top: 10px;
+      }
+      .left-header p {
+          font-size: .75rem;
+          margin-top: 30px;
+      }
+    }
+  }
+
+footer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 400px;
+
+      .by {
+        margin-left: 50px;
+      }
+    .write-me {
+        text-align: left;
+        margin-left: 50px;
+      }  
+    }
+
+  .write-me p {
+      font-size: 1rem;
+      text-align: left;
+      margin-left: 50px;
+  }
+
+  .contact-me h1{
+      margin-top: 30px;
+      margin-left: 100px;
+      text-align: center;
+  }
+
+  .form {
+      margin-top: 50px;
+      margin-left: 70px !important;
+      min-width: 80% !important;
+     }
+}
+
+
+
+@media only screen and (min-width: 501px) and (max-width: 1024px)  {
+  body, html{
+      height: 100vh;
+      background: $primary-color !important;
+      
+  }
+  
+  .Main-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+
+      .photo-and-name {
+      padding: 20px;
+      margin: 0;
+      width: 80%;
+      margin-top: 400px;
+      z-index: 1;
+    }
+
+    .info {
+    padding: 20px;
+    padding-top: 100px;
+    margin: 0;
+    width: 80%;
+    min-height: 500px;
+    overflow: scroll;
+  }
+  .photo-and-name img {
+    width: 40%;
+  }
+  
+  .greet h1 {
+      font-size: 3.4rem;
+  }
+
+  .greet h3 {
+      font-size: 1.25rem;
+    }
+  }
+  footer {
+    position: relative;
+    margin-top: 400px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  .nav-bar {
+    display: none;
+    position: fixed !important;
+    
+  ul {
+    list-style: none;
+    padding: 30px 10px;
+    margin: 0;
+   }
+  li{
+     margin-bottom: 20px;
+     font-family: $font-family;
+   }
+  li a {
+     color: black !important;
+     text-decoration: none;
+     font-weight: bold !important;
+   }
+  li a.active {
+     color: $accent-color !important;
+     font-size: 1.1rem;
+     font-weight: bold !important;
+    }    
+  
+  &.show {
+    display: block; 
+    position: absolute;
+    top: 0;
+    right: -250px;
+    width: 200px;
+    height: 30%;
+    background-color: $light-bg-color;  
+    animation: slideIn 1s ease forwards; 
+    z-index: 2;
+  }
+  
+  @keyframes slideIn {
+    0% { right: -250px; } 
+    100% { right: 0; }
+  }
+  
+  @keyframes slideOut {
+    0% { right: 0; } 
+    100% { right: -250px; } 
+  }
+  &.hide {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 30%;
+      background-color: $light-bg-color;
+      animation: slideOut 1s ease forwards;
+      z-index: 1000;
+    }
+}
+
+/*button to show navigation*/
+.container {
+  position: fixed;
+  display: inline-block;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  border: none;
+  justify-content: flex-end;
+  z-index: 5;
+}
+
+/*styling button using empty divs*/
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+}
+
+@media (min-width: 768px) {
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: end;
+
+   ul {
+    display: flex;
+    list-style: none;
+    padding: 30px 10px;
+    margin: 0;
+   }
+   li{
+     margin-right: 20px;
+     font-family: $font-family;
+   }
+
+  li a {
+     color: black;
+     text-decoration: none;
+   }
+  li a.active {
+     color: $accent-color;
+     font-size: 1.1rem;
+     font-weight: bold;
+   }
+}
+}
