@@ -43,9 +43,9 @@ export const Projects: React.FC = () => {
     <div className="projects-page">
       <h1>Projects</h1>
       {projects.map((project) => (
-        <>
+        <div key={project.id}>
           <h3>{project.title}</h3>
-          <div className="projects-box" key={project.id}>
+          <div className="projects-box">
             <div className="left">
               <img src={project.imageUrl} alt={`${project.title}-pic`} />
             </div>
@@ -57,7 +57,7 @@ export const Projects: React.FC = () => {
               </a>
             </div>
           </div>
-        </>
+        </div>
       ))}
     </div>
   );

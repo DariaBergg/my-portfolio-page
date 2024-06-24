@@ -2,6 +2,42 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
+interface Link {
+  link: string;
+  title: string;
+}
+const links: Link[] = [
+  {
+    link: '/',
+    title: 'ABOUT ME'
+  },
+  {
+    link: '/Resume',
+    title: 'RESUME'
+  },
+  {
+    link: '/Projects',
+    title: 'PROJECTS'
+  },
+  {
+    link: '/Contact',
+    title: 'CONTACT'
+  }
+]
+
+const AdvancedLink = ({link, title}: Link) => {
+  const location = useLocation();
+  return (
+    <li>
+      <Link to={link} className={classNames({
+        active: location.pathname === link
+      })}>
+      {title}
+      </Link>
+    </li>
+  )
+}
+
 export const Layout: React.FC = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -25,39 +61,7 @@ export const Layout: React.FC = () => {
     }
   };
 
-  interface Link {
-    link: string;
-    title: string;
-  }
-  const links: Link[] = [
-    {
-      link: '/',
-      title: 'ABOUT ME'
-    },
-    {
-      link: '/Resume',
-      title: 'RESUME'
-    },
-    {
-      link: '/Projects',
-      title: 'PROJECTS'
-    },
-    {
-      link: '/Contact',
-      title: 'CONTACT'
-    }
-  ]
-
-  const AdvancedLink = ({link, title}: Link) => {
-    const location = useLocation();
-    return (
-      <li>
-        <Link to={link} className={location.pathname === link ? 'active' : ''}>
-        {title}
-        </Link>
-      </li>
-    )
-  }
+ 
   return (
     <div className="layout">
       <header className="header">

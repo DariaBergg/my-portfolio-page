@@ -1,6 +1,5 @@
 export function Resume() {
   return (
-    <>
       <div className="resume-page">
         <h1>Resume</h1>
         <h2>IT education</h2>
@@ -34,6 +33,5 @@ export function Resume() {
           <p className="location">Czech republic, Prague</p>
         </div>
       </div>
-    </>
   );
 }

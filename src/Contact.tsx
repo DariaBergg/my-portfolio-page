@@ -28,7 +28,6 @@ export function Contact() {
   };
 
   return (
-    <>
       <div className="contact-page">
         <div className="contact">
           <div className="contact-me">
@@ -62,6 +61,5 @@ export function Contact() {
           </div>
         </div>
       </div>
-    </>
   );
 }
